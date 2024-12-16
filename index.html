@@ -1,45 +1,241 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+                </style>
 </head>
 <body>
-  <div class="card-container">
-    <div class="card">
-        <img src="images/project1.jpg">
-        <div class="card-content">
-            <h3>Project 1</h3>
-            <p>Description of project 1</p>
-            <a href="" class="btn">View Project</a>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#current-work-section">Current Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li><a href="#blog-section">Blog</a></li> -->
+        </ul>
+    </nav>
+    <section id="title" class="section title">
+        <div class="content">
+            <img src="images/photo.jpg" alt="Your Photo" class="profile-photo">
+            <div class="typewriter-container">
+                <div class="typewriter"><h1>Hello, I'm Rajvir Vyas!</h1></div>
+               
+            </div>
+            <!-- <hr class="divider"> -->
+    </section>
+    
+    <!-- About Me Section -->
+    <hr class="divider">
+    <section id="about-me" class="about-me">
+        
+        <div class="image-container">
+            <img src="images/skyline.jpg" alt="Descriptive Text" />
         </div>
-  </div>
-  <div class="card">
-    <img src="images/project2.jpg">
-    <div class="card-content">
-        <h3>Project 2</h3>
-        <p>Description of project 2</p>
-        <a href="" class="btn">View Project</a>
-    </div>
-</div>
-<div class="card-container">
-    <div class="card">
-        <img src="images/project3.jpg">
-        <div class="card-content">
-            <h3>Project 3</h3>
-            <p>Description of project 3</p>
-            <a href="" class="btn">View Project</a>
-        </div>
-  </div>
-  <div class="card">
-    <img src="images/project4.jpg">
-    <div class="card-content">
-        <h3>Project 4</h3>
-        <p>Description of project 4</p>
-        <a href="" class="btn">View Project</a>
-    </div>
-</div>
+        <div class="text-container">
+            <h2>About Me</h2>
+            <p>I'm an apsiring tech professional based in the San Francisco Bay Area, passionate about designing data-driven solutions that are provide actionable insights,
+                and harnessing the power of machine learning to automate analyatical processes, and cloud-forward applications. I'm interested in 
+                full-time opportunities making a direct impact in business operations by applying and growing meaningful technical and soft skills.</p>
+            <p>Relevant Skills: Python, SQL, R, Tableau, Machine Learning, Data Analysis, AWS</p>
+            <p>Alma Mater: Cal Poly San Luis Obispo, Class of 2024</p>
+            
+    </section>
+    <hr class="divider">
+   
 
+ 
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <h2>Highlighted Projects</h2>
+        
+                <div class="card-container">
+                    <div class="card">
+                        <img src="images/sql.png" alt="Project 3">
+                        <div class="card-content">
+                            <h3>Injection Attack Detection</h3>
+                            <i>Tech Stack: Pandas, ScikitLearn, Pytorch, Git, Langchain</i>
+                            <p>ML-Based SQL and Prompt Injection Detection in a Medical Chatbot App powered by Claude-2 LLM </p>
+                            <div class="button-class">
+                                <a href="https://github.com/rajvirvyas/Double-Injection-Classification" class="btn">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/surp.png" alt="Project 2">
+                        <div class="card-content">
+                            <h3>SURP NLP Research</h3>
+                            <i>Tech Stack: Python, Pandas, ScikitLearn, Google Collab, Git</i>
+                            <p>Sentiment Analysis of Cal Poly Applicant Conversations with Faculty & Students to Improve Admissions Outreach</p>
+                            <div class="button-class">
+                                <a href="https://github.com/rajvirvyas/NLP_Research" class="btn">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/soccer.png" alt="Project 4">
+                        <div class="card-content">
+                            <h3>Soccer Transfer Analysis</h3>
+                            <i>Tech Stack: RStudio, RShiny, Plotly, Git</i>
+                            <p>RShiny Interactive Visualization to Analyze Player Impact by Transfer Fee in 2023 Season Across Positions and Leagues</p>
+                            <div class="button-class">
+                                <a href="https://github.com/rajvirvyas/Soccer-Transfer-Analysis" class="btn">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/spacefinder.png" alt="Project 1">
+                        <div class="card-content">
+                            <h3>Space Finders Web App</h3>
+                            <i>Tech Stack: Javascript, Next.js, React, Docker, MUI, Git</i>
+                            <p>Full-stack web app to view, rate, comment on, bookmark, and check-in to study spots with Google Maps API</p>
+                            <div class="button-class">
+                                <a href="https://github.com/rajvirvyas/Space-Finder" class="btn">View on GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    
+
+                    
+                    
+                </div>
+                
+            
+        </div>
+    </section>
+    <hr class="divider">
+ <!-- Resume Section -->
+ <section id="resume" class="section resume">
+    <h2>Resume</h2>
+    <div class="button-class">
+        <a href="https://drive.google.com/uc?export=download&id=1RMMseZiI4jjf1w2TjEwBYYLVe7BHTg59" target="_blank" class="btn">
+            Download <i class="fas fa-download"></i>
+        </a>
+
+    </div>
+
+    <iframe src="https://drive.google.com/file/d/1RMMseZiI4jjf1w2TjEwBYYLVe7BHTg59/preview?usp=sharing&rm=minimal" width="1000" height="500" ></iframe>
+    <hr class="divider">
+</section>
+    <!-- Current Work Section -->
+<section id="current-work-section">
+    <h2>What I'm Currently Working On</h2>
+
+      <div class="current-work-section">
+        <div class="cards">
+          <div class="card" progress=50 number=1>
+             <!-- <span class="fa-stack fa-3x"> -->
+              <!-- <i class="fas fa-circle fa-stack-2x"></i> -->
+              
+            <!-- </span>   -->
+            <div class = "card-intro-container">
+                <h1><a href="#0">ML-Based Image Steganalysis</a></h1>
+                <p>Progress: 50%</p>  
+                <p class="read-more">Expand/Unexpand</p> 
+        </div> 
+            
+            <div class="card-details">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%">50%</div>
+                </div>
+                <p>Utilizing Machine Learning <br>To Detect Steganography<br> in Images and Exploring its <br>Application in User Authentication.</p>
+                <!-- <video controls>
+                    <source src="video.mp4" type="video/mp4" >
+                    Your browser does not support the video tag.
+                </video> -->
+                <!-- <div class="button-class">
+                    <a href="github.com" target="_blank" class="btn">View on GitHub</a>
+                </div> -->
+            </div>
+          </div>
+          <div class="card" progress=90 number=2>
+            <!-- <span class="fa-stack fa-3x"> -->
+             <!-- <i class="fas fa-circle fa-stack-2x"></i> -->
+             
+           <!-- </span>   -->
+           <div class = "card-intro-container">
+               <h1><a href="#0">AWS SAA-C03 Certification</a></h1>
+               <p>Progress: 90%</p>  
+               <p class="read-more">Expand/Unexpand</p> 
+       </div> 
+           
+           <div class="card-details">
+              
+               <div class="progress-bar">
+                   <div class="progress" style="width: 90%">90%</div>
+               </div>
+               <p>Studying for <br>AWS Solutions Architect<br> Associate Level Certification.<br>Exam Scheduled for<br> January 2025.</p>
+               <!-- <video controls>
+                   <source src="video.mp4" type="video/mp4" >
+                   Your browser does not support the video tag.
+               </video> -->
+               <!-- <div class="button-class">
+                   <a href="github.com" target="_blank" class="btn">View on GitHub</a>
+               </div> -->
+           </div>
+         </div>
+         <div class="card" progress=20 number=3>
+            <!-- <span class="fa-stack fa-3x"> -->
+             <!-- <i class="fas fa-circle fa-stack-2x"></i> -->
+             
+           <!-- </span>   -->
+           <div class = "card-intro-container">
+               <h1><a href="#0">Formula One 2024 Analysis</a></h1>
+               <p>Progress: 20%</p>  
+               <p class="read-more">Expand/Unexpand</p> 
+       </div> 
+           
+           <div class="card-details">
+               <!-- <p>Tech Stack: HTML, CSS, JavaScript</p> -->
+               <div class="progress-bar">
+                   <div class="progress" style="width: 20%">20%</div>
+               </div>
+               <p>Building a comprehensive <br> Tableau dashboard showcasing <br>Driver-Track Suitability,<br> Pit stop Strategy, and <br>Key Moments in 2024 Season.</p>
+               <!-- <video controls>
+                   <source src="video.mp4" type="video/mp4" >
+                   Your browser does not support the video tag.
+               </video> -->
+               <!-- <div class="button-class">
+                   <a href="github.com" target="_blank" class="btn">View on GitHub</a>
+               </div> -->
+           </div>
+         </div>
+         
+  </section>
+  <hr class="divider">
+  <!-- <section id="blog-section" style="position: relative; padding: 2rem; background-color: #fff;">
+    <h2>My Blog</h2>
+    <div class="blog-viewer">
+      <iframe 
+        src="https://medium.com" 
+        style="width: 100%; height: 500px; border: none;">
+      </iframe>
+    </div>
+  </section> -->
+     <!--Contact Section -->
+     <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <p> rajvir_vyas@outlook.com</p>
+        <div class="button-class">
+            <a href="https://www.linkedin.com/in/rajvir-vyas/" class="btn">LinkedIn</a>
+        </div>
+          </div>
+        
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
 </html>
