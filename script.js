@@ -1,4 +1,31 @@
 document.querySelectorAll('.current-work-section .card').forEach(card => {
+        const years = document.querySelectorAll('.timeline-years .year');
+    const experiences = document.querySelectorAll('.timeline-details .experience');
+
+    years.forEach(year => {
+    year.addEventListener('click', () => {
+        // Remove active from all years
+        years.forEach(y => y.classList.remove('active'));
+        // Add active to clicked year
+        year.classList.add('active');
+
+        // Remove active from all experiences
+        experiences.forEach(exp => exp.classList.remove('active'));
+        // Add active to selected year experience
+        const selectedYear = year.getAttribute('data-year');
+        document.querySelector(`.experience[data-year="${selectedYear}"]`).classList.add('active');
+    });
+    });
+// Select all job cards
+    const jobCards = document.querySelectorAll('.job-card');
+
+    jobCards.forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('active'); // toggle expanded state
+        });
+    });
+
+
     const percent = parseInt(card.getAttribute('progress'), 10);
     let color;
     let backgroundImg;
@@ -62,29 +89,4 @@ document.querySelectorAll('.current-work-section .card').forEach(card => {
         }
     });
 });
-const years = document.querySelectorAll('.timeline-years .year');
-const experiences = document.querySelectorAll('.timeline-details .experience');
-
-years.forEach(year => {
-  year.addEventListener('click', () => {
-    // Remove active from all years
-    years.forEach(y => y.classList.remove('active'));
-    // Add active to clicked year
-    year.classList.add('active');
-
-    // Remove active from all experiences
-    experiences.forEach(exp => exp.classList.remove('active'));
-    // Add active to selected year experience
-    const selectedYear = year.getAttribute('data-year');
-    document.querySelector(`.experience[data-year="${selectedYear}"]`).classList.add('active');
-  });
-});
-// Select all job cards
-const jobCards = document.querySelectorAll('.job-card');
-
-jobCards.forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('active'); // toggle expanded state
-    });
-});
-
+//
