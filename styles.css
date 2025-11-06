@@ -78,11 +78,136 @@ h2 {
     width: 100%;
     height: 100vh; /* Full viewport height */
 }
+.experiences {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  /* padding: 40px; */
+  /* box-sizing: border-box; */
+}
+
+.timeline-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.timeline-image-container {
+    flex: 1; /* Takes up half the width */
+    overflow: hidden; /* Ensures the image fits properly */
+}
+.timeline-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+
+/* LEFT: Years */
+.timeline-years {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.timeline-years .year {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #000;
+  font-weight: bold;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.timeline-years .year.active {
+  background: #007BFF;
+  color: #fff;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* RIGHT: Experience Cards */
+.timeline-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Hide inactive experiences */
+.timeline-details .experience {
+  display: none;
+}
+
+.timeline-details .experience.active {
+  display: block;
+}
+
+.job-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Signals clickability */
+}
+
+/* Pop-up effect on hover */
+.job-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Slight lift & scale */
+    box-shadow: 4px 8px 16px rgba(0,0,0,0.3); /* Bigger shadow for depth */
+}
+
+.job-card .job-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 10px;
+  padding-left: 20px; /* indents the bullet list from the job title */
+}
+
+.job-card.active .job-details {
+  max-height: 400px; /* expand height */
+}
+
+.job-card .job-details ul {
+  list-style-type: disc;     /* standard bullet points */
+  padding-left: 20px;        /* spacing between bullet and text */
+  margin: 0;                 /* remove default outer margin */
+}
+
+.job-card .job-details li {
+  margin-bottom: 8px;        /* space between lines */
+  line-height: 1.5;          /* readable line spacing */
+  color: #333;               /* readable text color */
+  font-size: 0.95rem;        /* slightly smaller text */
+}
+
+.job-card::before {
+  content: "";
+  position: absolute;
+  left: -40px; /* adjust distance to year column */
+  top: 25px;   /* align vertically with card */
+  /* width: 20px; horizontal line */
+  height: 2px;
+  background: #007BFF;
+}
+
+/* Optional: bullets for multiple jobs */
+.job-card h3::before {
+  content: "▶";
+  color: #007BFF;
+  margin-right: 10px;
+}
+
 
 .image-container {
     flex: 1; /* Takes up half the width */
     overflow: hidden; /* Ensures the image fits properly */
 }
+
 
 .image-container img {
     width: 100%;
@@ -110,7 +235,12 @@ h2 {
     color: #000;
 }
 
-.text-container p {
+.text-container p1 {
+    margin: 0 0 20px;
+    line-height: 1.5;
+    font-style: italic;
+}
+.text-container p2 {
     margin: 0 0 20px;
     line-height: 1.5;
 }
@@ -119,7 +249,7 @@ h2 {
     padding: 10px 20px;
     font-size: 1rem;
     color: white;
-    background-color: #007BFF;
+    background-color: linear-gradient(135deg, #007BFF, #0056b3);
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -153,6 +283,7 @@ h2 {
     margin-bottom: 20px;
     border: 3px solid #000;
 }
+
 
 .typewriter-container {
     display: flex;             /* Enables Flexbox */
